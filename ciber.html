@@ -10,7 +10,32 @@
 
     <title>M7.1 Nivel 1</title>
 </head>
-<body>
-    
+<body>    
+    <h1>Resultado de la operación:</h1>
+    <p id="missatge"></p>   
+
+    <script>
+        //Ejercicio 8, función calculadora definida en main-script.js
+        let operador, mensaje; //String
+        let valor1, valor2; //Numérico
+
+        operador = prompt("Introduce el símbolo de la operación a realizar:" +
+            "\n- Para sumar, introduce +" +
+            "\n- Para restar, introduce -" +
+            "\n- Para multiplicar, introduce *" +
+            "\n- Para dividir, introduce /");
+
+        do {
+            valor1 = parseFloat(prompt("Introduce el primer número:"));
+        } while (isNaN(valor1));
+
+        do {
+            valor2 = parseFloat(prompt("Introduce el segundo número:"));
+        } while (isNaN(valor2));
+
+        mensaje = calculadora(operador, valor1, valor2);
+
+        document.getElementById("missatge").innerHTML = mensaje;
+    </script>
 </body>
 </html>
