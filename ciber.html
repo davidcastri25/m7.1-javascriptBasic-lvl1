@@ -12,7 +12,7 @@
 </head>
 <body>    
     <h1>Resultado de la operación:</h1>
-    <p id="missatge"></p>   
+    <!-- <p id="missatge"></p>    -->
 
     <script>
         //Ejercicio 8, función calculadora definida en main-script.js
@@ -35,7 +35,9 @@
 
         mensaje = calculadora(operador, valor1, valor2);
 
-        document.getElementById("missatge").innerHTML = mensaje;
+        document.write("<p>" + mensaje + "</p>");
+
+        // document.getElementById("missatge").innerHTML = mensaje;
     </script>
 </body>
 </html>
