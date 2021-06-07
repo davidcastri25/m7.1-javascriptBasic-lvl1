@@ -62,7 +62,11 @@ function calculadora(operacion, num1, num2) {
     let resultado; 
     let mensaje;   
 
-    switch (operacion) {
+    if (operacion == "/" && num2 ==0){
+        mensaje = "No se puede dividir entre 0.";
+    }
+    else {
+        switch (operacion) {
         case "+":
             resultado = num1 + num2;
             break;
@@ -74,9 +78,10 @@ function calculadora(operacion, num1, num2) {
             break;
         default:
             resultado = num1 / num2;    
-    }
+        }
 
-    mensaje = "El resultado de la operación es: " + resultado + ".";
+        mensaje = "El resultado de la operación es: " + resultado + ".";
+    }    
 
     return mensaje;
 }
